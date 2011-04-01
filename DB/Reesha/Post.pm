@@ -1,7 +1,7 @@
 package DB::Reesha::Post;
 use base qw/DBIx::Class/;
 
-__PACKAGE__->load_components(qw/PK::Auto Core/);
+__PACKAGE__->load_components(qw/PK::Auto Core InflateColumn::DateTime/);
 __PACKAGE__->table('posts');
 __PACKAGE__->add_columns(
     'id'		=> { data_type => 'integer', is_auto_increment => 1 },
